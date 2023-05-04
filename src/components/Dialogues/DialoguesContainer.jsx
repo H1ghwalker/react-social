@@ -4,6 +4,7 @@ import {
     addMessageActionCreator,
 } from '../../redux/dialogues-reducer';
 import Dialogues from './Dialogues';
+import { Connect } from 'react-redux';
 import StoreContext from '../../StoreContext';
 
 const DialoguesContainer = () => {
@@ -27,5 +28,25 @@ const DialoguesContainer = () => {
         </StoreContext.Consumer>
     );
 };
+
+// let mapStateToProps = (state) => {
+//     return {
+//         dialoguesPage : state.dialoguesPage
+//     }
+// }
+
+// let mapDispatchToProps = (dispatch) => {
+//     return {
+//         addMessage: () => {
+//             dispatch(addMessageActionCreator());
+
+//         },
+//         updateNewMessageText: (message) => {
+//             dispatch(updateNewMessageTextActionCreator(message))
+//         }
+//     }
+// }
+
+// const DialoguesContainer = connect(mapStateToProps, mapDispatchToProps)(Dialogues);
 
 export default DialoguesContainer;
